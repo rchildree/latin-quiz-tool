@@ -1,0 +1,1 @@
+source ~/.nvm/nvm.sh && nvm use 22 && git add . && git commit -m "Update" && git push && npm run deploy
