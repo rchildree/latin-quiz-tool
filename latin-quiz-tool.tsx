@@ -1948,12 +1948,17 @@ const LatinQuiz = ({
 							{helpMode && (
 								<div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg mb-4">
 									<p className="text-sm text-yellow-800">
-										Help Mode: Hover over any word to see its dictionary form
+										<span className="hidden sm:inline">
+											Help Mode: Hover over any word to see its dictionary form
+										</span>
+										<span className="sm:hidden">
+											Help Mode: Dictionary forms shown below each word
+										</span>
 									</p>
 								</div>
 							)}
 							{showResults && (
-								<div className="mt-4 p-4 bg-indigo-50 rounded-lg">
+								<div className="mt-2 p-4 bg-indigo-50 rounded-lg">
 									<p className="text-lg font-semibold text-indigo-900">
 										Score: {getScore().correct} correct, {getScore().incorrect}{" "}
 										incorrect
@@ -2006,7 +2011,7 @@ const LatinQuiz = ({
 										{getWordIcon(word, index)}
 									</button>
 									{helpMode && word.dict && (
-										<div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+										<div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
 											{word.dict}
 											<div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
 										</div>
