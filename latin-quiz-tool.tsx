@@ -1177,7 +1177,7 @@ const LatinQuiz = ({
 		const qt = getQuizTypesForCategory();
 		return (
 			<>
-				<h2 className="text-2xl font-semibold text-indigo-900 mb-4">
+				<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
 					Select quiz type
 				</h2>
 				<div className="mb-6">
@@ -1257,22 +1257,22 @@ const LatinQuiz = ({
 	};
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+		<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-8">
 			<div className="max-w-4xl mx-auto">
 				{/* Header */}
-				<h1 className="text-4xl font-bold text-indigo-900 mb-8 text-center">
+				<h1 className="text-3xl sm:text-4xl font-bold text-indigo-900 mb-6 sm:mb-8 text-center">
 					Latin wordforms quizzer
 				</h1>
 
 				{/* Loading / Error states */}
 				{loading && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8 text-center">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8 text-center">
 						<p className="text-lg text-gray-600">Loading quiz data...</p>
 					</div>
 				)}
 
 				{error && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8 text-center">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8 text-center">
 						<p className="text-lg text-red-600">Error: {error}</p>
 						<p className="text-sm text-gray-500 mt-2">
 							Make sure <code>public/data/spans_data_cleaned.tsv</code> exists.
@@ -1282,8 +1282,8 @@ const LatinQuiz = ({
 
 				{/* Quiz Type Selection (Home) */}
 				{!loading && !error && data.length > 0 && !quizCategory && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-6">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-6">
 							Select quiz type
 						</h2>
 						<div className="space-y-4">
@@ -1339,7 +1339,7 @@ const LatinQuiz = ({
 
 				{/* No data loaded */}
 				{!loading && !error && data.length === 0 && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8 text-center">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8 text-center">
 						<p className="text-lg text-gray-600">No data found.</p>
 						<p className="text-sm text-gray-500 mt-2">
 							Place your TSV data in{" "}
@@ -1350,7 +1350,7 @@ const LatinQuiz = ({
 
 				{/* Verb Options */}
 				{data.length > 0 && quizCategory === "verbs" && !quizStarted && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8">
 						<div className="flex justify-between items-center mb-4">
 							<button
 								onClick={() => setQuizCategory(null)}
@@ -1366,7 +1366,7 @@ const LatinQuiz = ({
 							</button>
 						</div>
 
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-4">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
 							Select verb conjugations
 						</h2>
 						<div className="flex flex-wrap gap-2 mb-8">
@@ -1451,7 +1451,7 @@ const LatinQuiz = ({
 							</label>
 						</div>
 
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-4">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
 							Select quiz type
 						</h2>
 						<div className="mb-6">
@@ -1558,7 +1558,7 @@ const LatinQuiz = ({
 
 				{/* Noun Options */}
 				{data.length > 0 && quizCategory === "nouns" && !quizStarted && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8">
 						<div className="flex justify-between items-center mb-4">
 							<button
 								onClick={() => setQuizCategory(null)}
@@ -1574,7 +1574,7 @@ const LatinQuiz = ({
 							</button>
 						</div>
 
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-4">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
 							Select noun declensions
 						</h2>
 						<div className="flex flex-wrap gap-2 mb-8">
@@ -1648,7 +1648,7 @@ const LatinQuiz = ({
 
 				{/* Adjective Options */}
 				{data.length > 0 && quizCategory === "adjectives" && !quizStarted && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8">
 						<div className="flex justify-between items-center mb-4">
 							<button
 								onClick={() => setQuizCategory(null)}
@@ -1664,7 +1664,7 @@ const LatinQuiz = ({
 							</button>
 						</div>
 
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-6">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-6">
 							Select adjective types
 						</h2>
 						<div className="flex flex-wrap gap-2 mb-8">
@@ -1720,7 +1720,7 @@ const LatinQuiz = ({
 
 				{/* Participle Options */}
 				{data.length > 0 && quizCategory === "participles" && !quizStarted && (
-					<div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-6 sm:mb-8">
 						<div className="flex justify-between items-center mb-4">
 							<button
 								onClick={() => setQuizCategory(null)}
@@ -1736,7 +1736,7 @@ const LatinQuiz = ({
 							</button>
 						</div>
 
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-4">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
 							Select participle types
 						</h2>
 						<div className="flex flex-wrap gap-2 mb-8">
@@ -1756,7 +1756,7 @@ const LatinQuiz = ({
 							))}
 						</div>
 
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-4">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
 							Select verb conjugations
 						</h2>
 						<div className="flex flex-wrap gap-2 mb-8">
@@ -1796,7 +1796,7 @@ const LatinQuiz = ({
 							))}
 						</div>
 
-						<h2 className="text-2xl font-semibold text-indigo-900 mb-4">
+						<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
 							Select quiz type
 						</h2>
 						<div className="mb-6">
@@ -1916,7 +1916,7 @@ const LatinQuiz = ({
 
 				{/* Active Quiz */}
 				{quizStarted && (
-					<div className="bg-white rounded-lg shadow-lg p-8">
+					<div className="bg-white rounded-lg shadow-lg p-4 sm:p-8">
 						<div className="flex justify-end mb-2">
 							<button
 								onClick={resetToStart}
@@ -1927,7 +1927,7 @@ const LatinQuiz = ({
 						</div>
 						<div className="mb-6">
 							<div className="flex justify-between items-center mb-2">
-								<h2 className="text-2xl font-semibold text-indigo-900">
+								<h2 className="text-xl sm:text-2xl font-semibold text-indigo-900">
 									Select all words that are{" "}
 									<span className="text-indigo-600">
 										{targetCategory?.display}
@@ -1976,7 +1976,7 @@ const LatinQuiz = ({
 							)}
 						</div>
 
-						<div className="grid grid-cols-2 gap-4 mb-6">
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
 							{quizWords.map((word, index) => (
 								<div key={index} className="relative group">
 									<button
@@ -1988,8 +1988,8 @@ const LatinQuiz = ({
 											(showResults ? " cursor-default" : " cursor-pointer")
 										}
 									>
-										<div className="text-left">
-											<div className="font-semibold text-lg text-gray-900">
+										<div className="text-left break-words overflow-hidden">
+											<div className="font-semibold text-lg text-gray-900 break-words">
 												{word.word}
 											</div>
 											{showResults && (
