@@ -1993,7 +1993,7 @@ const LatinQuiz = ({
 											(showResults ? " cursor-default" : " cursor-pointer")
 										}
 									>
-										<div className="text-left break-words overflow-hidden">
+										<div className="text-left break-words overflow-hidden flex-1">
 											<div className="font-semibold text-lg text-gray-900 break-words">
 												{word.word}
 											</div>
@@ -2007,15 +2007,14 @@ const LatinQuiz = ({
 													)}
 												</div>
 											)}
+											{helpMode && word.dict && (
+												<div className="text-sm text-gray-500 mt-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+													{word.dict}
+												</div>
+											)}
 										</div>
 										{getWordIcon(word, index)}
 									</button>
-									{helpMode && word.dict && (
-										<div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
-											{word.dict}
-											<div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
-										</div>
-									)}
 								</div>
 							))}
 						</div>
